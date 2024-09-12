@@ -1,0 +1,350 @@
+ body .container {
+     background: var(--surface-page, #FFF);
+     margin-top: 10rem;
+ }
+
+ .header {
+     position: fixed;
+     top: 1rem;
+ }
+
+ body .header-box {
+     justify-content: space-between;
+     align-items: center;
+
+ }
+
+
+ #kc-locale {
+     position: fixed;
+     right: 1.5rem;
+     top: 1.5rem;
+ }
+
+ #kc-locale button {
+     border-radius: var(--spacing-xs, 0.5rem);
+     display: flex;
+     min-height: 3rem;
+     padding: var(--spacing-sm, 0.75rem) var(--spacing-sm, 0.75rem) var(--spacing-sm, 0.75rem) var(--spacing-lg, 1.5rem);
+     justify-content: center;
+     align-items: center;
+     gap: var(--spacing-sm, 0.75rem);
+     background-color: #FFF;
+     border: 0px;
+ }
+
+ #wrapper .contact-update-form {
+     display: flex;
+     flex-direction: column;
+
+ }
+
+ #kc-locale span {
+     color: var(--surface-action-secondary-content, #0B6AEF);
+     /* Body/strong/s */
+     font-family: Montserrat;
+     font-size: 0.875rem;
+     font-style: normal;
+     font-weight: 700;
+     line-height: 1.25rem;
+     /* 142.857% */
+ }
+
+ .container .title {
+     align-self: stretch;
+     color: var(--text-headings, #1A1A1A);
+     text-align: center;
+     /* Heading/strong/l */
+     font-family: Montserrat;
+     font-size: 2rem;
+     font-style: normal;
+     font-weight: 700;
+     line-height: 2.5rem;
+     /* 125% */
+ }
+
+ #wrapper .contact-update-form .form-group {
+     margin-bottom: 15px;
+     position: relative;
+ }
+
+ #wrapper .contact-update-form .text-danger {
+     color: red;
+     font-size: 0.875em;
+ }
+
+ #wrapper .contact-update-form.form-container span {
+     color: var(--text-input-text-default, #808080);
+
+     /* Body/regular/xs */
+     font-family: Montserrat;
+     font-size: 0.75rem;
+     font-style: normal;
+     font-weight: 400;
+     line-height: 1rem;
+     /* 133.333% */
+ }
+
+ #wrapper .contact-update-form.form-container input,
+ #wrapper .form-container.contact-update-form select {
+     border-radius: var(--spacing-xs, 0.5rem);
+     box-sizing: border-box;
+     background: var(--surface-input-fill-default, rgba(0, 0, 0, 0.05));
+     border: 0px;
+     display: flex;
+     min-height: 3rem;
+     width: 100%;
+     padding: var(--spacing-xxs, 0.25rem) var(--spacing-md, 1rem);
+     align-items: center;
+     gap: 0.625rem;
+     align-self: stretch;
+     color: var(--text-input-text-active, #000);
+     /* Body/regular/s */
+     font-family: Montserrat;
+     font-size: 0.875rem;
+     font-style: normal;
+     font-weight: 400;
+     line-height: 1.25rem;
+     /* 142.857% */
+ }
+
+ #wrapper .contact-update-form input:focus~.floating-label,
+ #wrapper .contact-update-form input:not(:placeholder-shown)~.floating-label {
+     top: 0.1rem;
+     /* 8px / 16px = 0.5rem */
+     bottom: 0.625rem;
+     /* 10px / 16px = 0.625rem */
+     left: 1rem;
+     /* 20px / 16px = 1.25rem */
+     font-size: 0.6875rem;
+     /* 11px / 16px = 0.6875rem */
+     opacity: 1;
+ }
+
+ #wrapper .contact-update-form .input-text {
+     font-size: 0.875rem;
+     /* 14px / 16px = 0.875rem */
+     height: 3rem;
+     /* 35px / 16px = 2.1875rem */
+     padding: .5rem;
+ }
+
+ #wrapper .contact-update-form .floating-label {
+     position: absolute;
+     pointer-events: none;
+     left: 1rem;
+     /* 20px / 16px = 1.25rem */
+     top: 1rem;
+     /* 18px / 16px = 1.125rem */
+     transition: 0.2s ease all;
+ }
+
+ #wrapper .contact-update-form .select-floating-label {
+     position: absolute;
+     pointer-events: none;
+     left: 1.25rem;
+     /* 20px / 16px = 1.25rem */
+     top: 0.1rem;
+     /* 18px / 16px = 1.125rem */
+     transition: 0.2s ease all;
+ }
+
+ #wrapper .form-container.contact-update-form .lexicon-icon.lexicon-icon-asterisk.reference-mark {
+     font-size: .4rem;
+ }
+
+ #wrapper .contact-update-form .custom-btn button {
+     cursor: pointer;
+     display: flex;
+     min-height: 3rem;
+     padding: var(--spacing-sm, 0.75rem) var(--spacing-lg, 1.5rem);
+     justify-content: center;
+     align-items: center;
+     gap: var(--spacing-sm, 0.75rem);
+     align-self: stretch;
+     border-radius: var(--spacing-xs, 0.5rem);
+     border: 0px;
+     width: 100%;
+ }
+
+ #wrapper .contact-update-form .btn.btn-primary {
+     background: var(--surface-action-primary, #0B6AEF);
+     color: var(--surface-action-primary-content, #FFF);
+     font-family: Montserrat;
+     font-size: 0.875rem;
+     font-style: normal;
+     font-weight: 700;
+     line-height: 1.25rem;
+ }
+
+ #wrapper .contact-update-form .btn.btn-second-primary {
+     color: #fff;
+     font-family: Montserrat;
+     font-size: 0.875rem;
+     font-style: normal;
+     font-weight: 700;
+     line-height: 1.25rem;
+     border-radius: var(--spacing-xs, 0.5rem);
+     background: var(--surface-action-primary, #0B6AEF);
+ }
+
+ #wrapper .contact-update-form .toggle-icon {
+     position: absolute;
+     top: 50%;
+     right: 10px;
+     transform: translateY(-50%);
+     cursor: pointer;
+ }
+
+
+
+ #wrapper .contact-update-form .title svg {
+     border-radius: var(--radius-round, 4rem);
+     background: var(--surface-action-secondary-mono, rgba(0, 0, 0, 0.05));
+     padding: .5rem;
+     cursor: pointer;
+ }
+
+ #wrapper .contact-update-form .error {
+     border-radius: var(--spacing-xs, 0.5rem) !important;
+     border: var(--spacing-xxxs, 2px) solid var(--border-error, #E34935) !important;
+     background: var(--surface-error, #F0E6E4) !important;
+     color: var(--text-error, #AF2A1A) !important;
+ }
+
+ #wrapper .contact-update-form .otp-error {
+     border-radius: var(--spacing-xs, 0.5rem) !important;
+     color: var(--text-error, #AF2A1A) !important;
+ }
+
+ #wrapper .contact-update-form .error-message {
+     color: var(--text-error, #AF2A1A) !important;
+ }
+
+ #wrapper .contact-update-form .pass {
+     color: var(--text-success, #1D6E4F);
+ }
+
+ #wrapper .contact-update-form .error:focus {
+     outline: none;
+ }
+
+ #wrapper .otp-container {
+     display: flex;
+     padding: 0rem var(--spacing-none, 0rem);
+     flex-direction: column;
+     align-items: center;
+     gap: var(--spacing-md, 1rem);
+     align-self: stretch;
+ }
+
+ #wrapper .otp-container .otp-parts {
+     display: flex;
+     flex-direction: row;
+     align-items: flex-start;
+     gap: var(--spacing-md, 1rem);
+     align-self: stretch;
+     justify-content: space-evenly;
+
+ }
+
+ #wrapper .otp-container .otp-parts .otp-input {
+     display: flex;
+     text-align-last: center;
+     padding: var(--spacing-md, 1rem);
+     justify-content: center;
+     align-items: center;
+     gap: 0.625rem;
+     flex: 1 0 0;
+     border-radius: var(--spacing-xs, 0.5rem);
+     background: var(--surface-input-fill-default, rgba(0, 0, 0, 0.05));
+ }
+
+ #wrapper .otp-container .otp-parts .otp-counter {
+     color: var(--text-headings, #1A1A1A);
+     text-align: center;
+     font-family: Montserrat;
+     font-size: 1rem;
+     font-style: normal;
+     font-weight: 400;
+     line-height: 1.5rem;
+ }
+
+ #wrapper .otp-container .btn-third-primary {
+     display: flex;
+     min-height: 3.5rem;
+     padding: var(--spacing-md, 1rem) var(--spacing-xl, 2rem);
+     justify-content: center;
+     align-items: center;
+     gap: var(--spacing-sm, 0.75rem);
+     align-self: stretch;
+     color: var(--surface-action-secondary-content, #0B6AEF);
+
+
+     font-family: Montserrat;
+     font-size: 1rem;
+     font-style: normal;
+     font-weight: 700;
+     line-height: 1.5rem;
+     border-radius: var(--spacing-xs, 0.5rem);
+     background: var(--surface-action-secondary, rgba(11, 106, 239, 0.10));
+     text-align: center;
+ }
+
+ .disabled {
+     cursor: not-allowed !important;
+ }
+
+ .sub-title {
+     color: var(--text-headings, #1A1A1A);
+     text-align: center;
+     align-self: stretch;
+     /* Body/regular/m */
+     font-family: Montserrat;
+     font-size: 1rem;
+     font-style: normal;
+     font-weight: 400;
+     line-height: 1.5rem;
+     /* 150% */
+ }
+
+ .text-style-primary {
+     color: var(--surface-action-primary, #0B6AEF) !important;
+
+
+ }
+
+ .allowed-btn {
+     cursor: pointer;
+
+ }
+
+ #loader {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .loader {
+     border: .2rem solid #f3f3f3;
+     border-top: .2rem solid var(--surface-action-primary, #0B6AEF);
+     border-radius: 50%;
+     width: 10rem;
+     height: 10rem;
+     animation: spinCustomApp 2s linear infinite;
+
+ }
+
+ @keyframes spinCustomApp {
+     0% {
+         transform: rotate(0deg);
+     }
+
+     100% {
+         transform: rotate(360deg);
+     }
+ }
+
+ #wrapper a {
+     text-decoration: none;
+ }

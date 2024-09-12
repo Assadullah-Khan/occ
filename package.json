@@ -1,0 +1,30 @@
+{
+  "name": "occ-microservices",
+  "version": "1.0.0",
+  "description": "Microservices for the OCC infrastucture",
+  "main": "index.js",
+  "scripts": {
+    "dev": "docker network inspect sso-network >/dev/null 2>&1 || docker network create --driver bridge sso-network && docker compose -f ./docker-compose.debug.yml up",
+    "local": "docker network inspect sso-network >/dev/null 2>&1 || docker network create --driver bridge sso-network && docker compose -f ./docker-compose.debug.yml up",
+    "install": "(cd apps/api-gateway && npm install); (cd apps/notification && npm install); (cd apps/provisioning && npm install); (cd apps/purchase && npm install); (cd apps/notification && npm install); (cd apps/saga-orchestrator && npm install); (cd apps/subscriber && npm install);",
+    "start": "docker compose -f ./docker-compose.yml up"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Orbit-Communication-Company/occ-microservices.git"
+  },
+  "author": "Orbit Communication Company - Development Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Orbit-Communication-Company/occ-microservices/issues"
+  },
+  "homepage": "https://github.com/Orbit-Communication-Company/occ-microservices#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.7.0",
+    "eslint": "^9.7.0",
+    "globals": "^15.8.0"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^9.0.2"
+  }
+}
