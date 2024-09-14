@@ -318,9 +318,13 @@ public class RegistrationPhoneUserCreation implements FormActionFactory, FormAct
       formData.add(UserModel.USERNAME,phoneNumber);
     }
 
+    
     context.getEvent().detail(Details.USERNAME, username)
-        .detail(Details.REGISTER_METHOD, "form")
-        .detail(FIELD_PHONE_NUMBER,phoneNumber);
+            .detail(Details.REGISTER_METHOD, "form")
+            .detail(FIELD_PHONE_NUMBER,phoneNumber);
+
+
+
 
     if (!isHideEmail(context)){
       context.getEvent().detail(Details.EMAIL,email);
@@ -329,13 +333,17 @@ public class RegistrationPhoneUserCreation implements FormActionFactory, FormAct
     formData.remove(UserModel.LAST_NAME);
     formData.add(UserModel.FIRST_NAME,"temp");
     formData.add(UserModel.LAST_NAME,"temp");
+
     UserProfileProvider profileProvider = session.getProvider(UserProfileProvider.class);
     UserProfile profile = profileProvider.create(UserProfileContext.REGISTRATION, formData);
     UserModel user = profile.create();
 
 //    UserModel user = context.getSession().users().addUser(context.getRealm(), username);
     user.setEnabled(true);
+    user.setEmailVerified(true);
     context.setUser(user);
+
+
 
     context.getAuthenticationSession().setClientNote(OIDCLoginProtocol.LOGIN_HINT_PARAM, username);
     //AttributeFormDataProcessor.process(formData);

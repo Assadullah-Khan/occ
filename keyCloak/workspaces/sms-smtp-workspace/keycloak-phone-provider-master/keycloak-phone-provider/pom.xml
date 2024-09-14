@@ -19,6 +19,12 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
           <groupId>com.googlecode.libphonenumber</groupId>
           <artifactId>libphonenumber</artifactId>
           <version>8.13.7</version>
@@ -73,7 +79,8 @@
                                     <version>${project.version}</version>
                                 </artifactItem>
                             </artifactItems>
-                            <outputDirectory>../target/providers</outputDirectory>
+<!--                            <outputDirectory>../target/providers</outputDirectory>-->
+                            <outputDirectory>../../../../providers</outputDirectory>
                             <stripClassifier>true</stripClassifier>
                             <stripVersion>true</stripVersion>
                         </configuration>

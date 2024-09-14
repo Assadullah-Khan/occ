@@ -42,7 +42,7 @@ services:
     volumes:
 #      - ./keyCloak/realms:/opt/keycloak/data/import
       - ./keyCloak/themes:/opt/keycloak/themes
-      - ./keyCloak/workspaces/sms-smtp-workspace/keycloak-phone-provider-master/target/providers:/opt/keycloak/providers
+      - ./keyCloak/providers:/opt/keycloak/providers
   pgdb:
     image: postgres
     container_name: pgdb

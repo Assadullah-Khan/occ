@@ -31,6 +31,8 @@ import java.io.IOException;
 import java.time.Instant;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public  class DefaultPhoneVerificationCodeProvider implements PhoneVerificationCodeProvider {
 
@@ -207,6 +209,7 @@ public  class DefaultPhoneVerificationCodeProvider implements PhoneVerificationC
         }
 
 
+
         if (updateUserPhoneNumber){
             if (!Utils.isDuplicatePhoneAllowed(session)){
                 session.users()
@@ -240,7 +243,15 @@ public  class DefaultPhoneVerificationCodeProvider implements PhoneVerificationC
                     });
             }
             user.setSingleAttribute("phoneNumberVerified", "true");
-            user.setSingleAttribute("phoneNumber", phoneNumber);
+
+            Pattern Email_Regex = Pattern.compile ("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-.]{2,}$");
+            Matcher Email_Regex_Matcher = Email_Regex.matcher (phoneNumber);
+
+            if(Email_Regex_Matcher.matches ()) {
+                user.setSingleAttribute("phoneNumber", "");
+            } else {
+                user.setSingleAttribute("phoneNumber", phoneNumber);
+            }
 
             user.removeRequiredAction(UpdatePhoneNumberRequiredAction.PROVIDER_ID);
         }

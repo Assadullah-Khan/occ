@@ -66,8 +66,8 @@
                         <@components.formField
                             type="text"
                             id="phoneNumber"
-                            name="phoneNumber"
-                            value="${(login.phoneNumber!'')}"
+                            name="username"
+                            value="${(login.username!'')}"
                             autocomplete="on"
                             booleanAttributes=["autofocus"]
                             labelText="${(!realm.loginWithEmailAllowed)?then(msg('phoneNumber'), (!realm.registrationEmailAsUsername)?then(msg('phoneNumberOrEmail'), msg('email')))}"

@@ -102,7 +102,7 @@ public class PhoneUsernamePasswordForm extends UsernamePasswordForm implements A
     if (!byPhone) {
       return validateUserAndPassword(context, inputData);
     }
-    String phoneNumber = inputData.getFirst(FIELD_PHONE_NUMBER);
+    String phoneNumber = inputData.getFirst(UserModel.USERNAME);
 
 
     if (Validation.isBlank(phoneNumber)) {

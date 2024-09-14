@@ -171,6 +171,8 @@ public class RegistrationPhoneVerificationCode implements FormAction, FormAction
   public void success(FormContext context) {
 
     UserModel user = context.getUser();
+
+    logger.info(user);
     var session = context.getSession();
 
     MultivaluedMap<String, String> formData = context.getHttpRequest().getDecodedFormParameters();
