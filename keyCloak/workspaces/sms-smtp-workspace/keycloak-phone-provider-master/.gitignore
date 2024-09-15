@@ -18,7 +18,7 @@ keycloak-sms-provider-aliyun/target
 keycloak-sms-provider-aws-sns/target
 keycloak-sms-provider-bulksms/target
 keycloak-sms-provider-cloopen/target
-keycloak-sms-provider-dummy/target
+keycloak-sms-provider-occ/target
 keycloak-sms-provider-tencent/target
 keycloak-sms-provider-totalvoice/target
 keycloak-sms-provider-twilio/target

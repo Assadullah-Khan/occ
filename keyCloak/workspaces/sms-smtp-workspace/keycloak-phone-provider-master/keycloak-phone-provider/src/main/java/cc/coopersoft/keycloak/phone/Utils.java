@@ -64,6 +64,7 @@ public class Utils {
 
     }
 
+
 //    public static Optional<UserModel> findUserByPhone(UserProvider userProvider, RealmModel realm, String phoneNumber, String notIs){
 //        return userProvider
 //            .searchForUserByUserAttributeStream(realm, "phoneNumber", phoneNumber)

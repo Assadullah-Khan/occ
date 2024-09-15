@@ -30,7 +30,8 @@
                   <version>${project.version}</version>
                 </artifactItem>
               </artifactItems>
-              <outputDirectory>../target/providers</outputDirectory>
+<!--              <outputDirectory>../target/providers</outputDirectory>-->
+              <outputDirectory>../../../../providers</outputDirectory>
               <stripClassifier>true</stripClassifier>
               <stripVersion>true</stripVersion>
             </configuration>

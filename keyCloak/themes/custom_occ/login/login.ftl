@@ -67,7 +67,7 @@
                             type="text"
                             id="phoneNumber"
                             name="username"
-                            value="${(login.username!'')}"
+                            value="${(login.phoneNumber!'')}"
                             autocomplete="on"
                             booleanAttributes=["autofocus"]
                             labelText="${(!realm.loginWithEmailAllowed)?then(msg('phoneNumber'), (!realm.registrationEmailAsUsername)?then(msg('phoneNumberOrEmail'), msg('email')))}"
